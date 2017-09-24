@@ -17,6 +17,14 @@
   </head>
   <body>
 
+
+    <!-- @TODO 
+      # add check boxes for "Do you use Discord?"
+      # add check boxes for "will you have access to forums"
+      # add check boxes for "will you rep the guild"
+
+    -->
+
     <!-- Begin survey form -->
     
     <form id="surveyForm" class="form">
@@ -45,96 +53,113 @@
       <small class="text-danger">We require this so we can easily identify you if you have multiple accounts</small>
       <div class="relative">
         <input class="form-control" autofocus="" type="text" required="" placeholder="Type your Arena.net Username..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-        <i class="fa fa-user"></i>
+        <!-- <i class="fa fa-user"></i> -->
       </div>
     </div>
 
+    <hr>
     <!-- Are you new to this game? If so, do you need a mentor? -->
 
     <div class="form-group">
       <label for="newToGame">Are you new to this game?</label>
       <div class="relative radio">
-        <label><input type="radio" id="newToGame" name="newToGame" value="yes">Yes</label>
+        <label><input type="radio" id="newToGame" name="newToGame" value="yes">Yes</label>       
         
         <label><input type="radio" id="newToGame" name="newToGame" value="no">No</label>
         
         <!--  <input class="form-control" id="newToGame" type="text" required="" autofocus="" title="Username should only contain letters. e.g. Piyush Gupta" autocomplete="" placeholder="Type your name here...">
         <i class="fa fa-user"></i> -->
       </div>
-      <label for="needMentor">Will you want a Mentor?</label>
-      <div class="relative radio">
-        <label><input type="radio" id="needMentor" name="needMentor" value="yes">Yes</label>
-        
-        <label><input type="radio" id="needMentor" name="needMentor" value="no">No</label>
+
+       <div class="form-group" id="mentorSection" style="display: none">
+          <label for="needMentor">Would you like a mentor at this time?</label>
+          <input class="form-control" type="text" id="needMentor" name="needMentor" class="relative" pattern="[a-zA-Z\s]+" pair="#newToGame">
+        </div>
     </div>
 
+    <!-- <div class="form-group" id="mentorSection">
+      <label for="needMentor">Will you want a Mentor?</label>
+      <div class="relative radio" id="mentorSelectionResponse">
+        <label><input type="radio" id="needMentorYes" name="needMentor" value="yes">Yes</label>
+        
+        <label><input type="radio" id="needMentor" name="needMentor" value="no">No</label>
+      </div>
+    </div> -->
+
+    <hr>
     <!-- When did you join the guild? -->
 
     <div class="form-group">
       <label for="joinDate">When did you join the guild?</label>
       <div class="relative">
         <input class="form-control" type="date" name="joinDate" required="">
-        <i class="fa fa-phone"></i>
+        <!-- <i class="fa fa-phone"></i> -->
       </div>
     </div>
 
+    <hr>
     <!-- What is your time zone? -->
 
     <div class="form-group">
       <label for="timeZone">What is your time zone?</label>
       <div class="relative">
         <input class="form-control" type="text" required="" placeholder="Time zone...">
-        <i class="fa fa-clock-o"></i>
+        <!-- <i class="fa fa-clock-o"></i> -->
       </div>
     </div>
 
+    <hr>
     <!-- Best time you can be online? -->
 
     <div class="form-group">
       <label for="email">Best time you can be online?</label>
       <div class="relative">
-      <input class="form-control" type="text" id="designation" required="" placeholder="Type your designation...">
-      <i class="fa fa-clock-o"></i>
+      <input class="form-control" type="text" id="designation" required="" placeholder="Morning? Noon? Night?">
+      <!-- <i class="fa fa-clock-o"></i> -->
     </div>  
     </div>
 
+    <hr>
     <!-- Do you use discord? -->
 
     <div class="form-group">
       <label for="email">Do you use <a href="https://www.discordapp.com">Discord?</a></label>
       <div class="relative">
         <input class="form-control" type="text" id="tags" required="" placeholder="Type your specialization...">
-        <i class="fa fa-headphones"></i>
+        <!-- <i class="fa fa-headphones"></i> -->
       </div>
     </div>
 
+    <hr>
     <!-- Will you have access to our online forums? -->
 
     <div class="form-group">
-      <label for="email">Do you use <a href="https://www.discordapp.com">Discord?</a></label>
+      <label for="email">Will you have access to our  <a href="http://btpact.com/forums/">Forums?</a></label>
       <div class="relative">
         <input class="form-control" type="text" id="tags" required="" placeholder="Type your specialization...">
-        <i class="fa fa-headphones"></i>
+        <!-- <i class="fa fa-headphones"></i> -->
       </div>
     </div>
 
+    <hr>
     <!-- What is your preferred guild mission? -->
 
     <div class="form-group">
-      <label for="email">Do you use <a href="https://www.discordapp.com">Discord?</a></label>
+      <label for="email">What is your preferred guild mission / event? (Treks, races, Jumping Puzzles, Fractals, Dungeons, Raids, PvP, WvW, etc)</label>
       <div class="relative">
-        <input class="form-control" type="text" id="tags" required="" placeholder="Type your specialization...">
-        <i class="fa fa-headphones"></i>
+        <input class="form-control" type="text" id="tags" required="" placeholder="Preferred event / guild mission">
+        <!-- <i class="fa fa-headphones"></i> -->
       </div>
     </div>
 
+    <hr>
     <!-- Will you Rep the guild? -->
 
     <div class="form-group">
-      <label for="email">Do you use <a href="https://www.discordapp.com">Discord?</a></label>
+      <label for="email">Will you Represent the guild?</label>
       <div class="relative">
-        <input class="form-control" type="text" id="tags" required="" placeholder="Type your specialization...">
-        <i class="fa fa-headphones"></i>
+        <input class="form-control" type="text" id="tags" required="" placeholder="Yes or No">
+        <!-- <i class="fa fa-headphones"></i> -->
       </div>
     </div>
 

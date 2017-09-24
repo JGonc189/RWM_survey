@@ -8,20 +8,15 @@ function submitForm(e) {
 	console.log(123);
 }
 
-
-
-$(document).ready(function () {
-	toggleFields();
-	$('#newToGame').change(function () {
-		toggleFields();
+$(document).ready(function(){
+	$(function() {
+		$('input[name="newToGame"]').on('click',function() {
+			if ($(this).val() == 'yes') {
+				$('#mentorSection').show();
+			} else {
+				$('#mentorSection').hide();
+			}
+		});
 	});
 });
 
-// create function to toggle if the user needs a mentor.
-
-function toggleFields() {
-	if ($('#newToGame').val() === 'yes')
-		$('#needMentor').show();
-	else
-		$('#needMentor').hide();
-}
